@@ -1,0 +1,155 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables for Color Scheme */
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #009688; /* Teal */
+    --accent-color: #FF5722; /* Deep Orange */
+    --background-color: #f0f0f0; /* Light Grey */
+    --text-color: #333333; /* Dark Grey */
+    --border-color: #CCCCCC; /* Light Grey */
+    --hover-color: #3E8E41; /* Darker Green */
+}
+
+/* General Styles */
+html {
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--background-color);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.habits {
+    text-align: left;
+    list-style: none;
+}
+
+.habits li {
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.habits li:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+.habits label {
+    flex: 1;
+    cursor: pointer;
+}
+
+.habits input {
+    margin-right: 12px;
+}
+
+.habits input {
+    display: none;
+}
+
+.habits input + label:before {
+    content: "+";
+    margin-right: 12px;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.habits input + label span {
+    font-weight: 200;
+    font-size: 0.75rem;
+}
+
+.habits input:checked + label {
+    text-decoration: line-through;
+    color: lightgrey;
+}
+
+.habits button {
+    padding-left: 30px;
+    background: none;
+    margin: 5px;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.habits button:hover {
+    color: var(--hover-color);
+}
+
+.add-habit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.add-habit input {
+    padding: 10px;
+    margin: 5px;
+    outline: 0;
+    border: 2px solid var(--border-color);
+    border-radius: 100px;
+    transition: border-color 0.3s ease;
+}
+
+.add-habit input:focus {
+    border-color: var(--primary-color);
+}
+
+.add-habit select {
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    padding: 5px;
+    background-color: #ffffff;
+    color: var(--text-color);
+}
+
+.frequency {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-top: 10px;
+}

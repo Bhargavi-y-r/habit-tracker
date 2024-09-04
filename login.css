@@ -1,0 +1,68 @@
+:root {
+    --primary: #ffffff; /* Background color */
+    --secondary: #333333; /* Text color */
+    --med: 2rem; /* Medium font size */
+    --base: 1rem; /* Base font size */
+    --sm: 0.5rem; /* Small spacing */
+    --light: #f4f4f4; /* Light background color */
+    --danger: #ff5555; /* Hover color for button */
+    --shadow: rgba(0, 0, 0, 0.2); /* Shadow color */
+}
+
+body.login-page {
+    font-family: 'Odibee Sans', cursive;
+    background-color: var(--primary);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--secondary);
+}
+
+header h1 {
+    font-size: var(--med);
+    margin-bottom: var(--med);
+    text-align: center;
+}
+
+.login-container {
+    display: grid;
+    place-items: center;
+    padding: var(--med);
+    background-color: var(--light);
+    border: 2px solid var(--secondary);
+    border-radius: var(--base);
+    box-shadow: 1px 4px 30px 10px var(--shadow);
+}
+
+form {
+    display: grid;
+    grid-gap: var(--sm);
+    width: 300px;
+}
+
+label {
+    font-size: var(--base);
+}
+
+input[type="email"] {
+    padding: var(--sm);
+    border-radius: var(--base);
+    border: 1px solid var(--secondary);
+    font-size: var(--base);
+}
+
+button {
+    padding: var(--sm);
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    border-radius: var(--base);
+    font-size: var(--base);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--danger);
+}
